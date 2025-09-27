@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SnakeDn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>SnakeDn</h1>
+      <div id="user-area">
+        <span id="welcome"></span>
+        <button id="logout" style="display:none">Logout</button>
+      </div>
+    </header>
+
+    <section class="auth card">
+      <h2>Autentificare / Înregistrare</h2>
+      <input id="username" placeholder="username" />
+      <input id="password" type="password" placeholder="parolă" />
+      <div class="row">
+        <button id="btn-login">Login</button>
+        <button id="btn-register">Înregistrează</button>
+      </div>
+      <p id="auth-msg" class="muted"></p>
+    </section>
+
+    <section class="game-area card">
+      <canvas id="game" width="400" height="400"></canvas>
+      <div class="controls">
+        <div>Scor: <span id="score">0</span></div>
+        <button id="start">Start / Restart</button>
+        <button id="submit-score" disabled>Trimite scor la leaderboard</button>
+      </div>
+    </section>
+
+    <section class="leaderboard card">
+      <h2>Leaderboard</h2>
+      <ol id="leaders"></ol>
+      <button id="refresh-leaders">Reîmprospătează</button>
+    </section>
+
+    <footer class="muted">Prima persoană care se înregistrează devine <strong>owner</strong>.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
