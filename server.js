@@ -72,3 +72,16 @@ app.get('/api/leaderboard', (req,res)=>{
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=> console.log('Server rulează pe', PORT));
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Servește fișierele statice (HTML, CSS, JS) din folderul public
+app.use(express.static(path.join(__dirname, "public")));
+
+// Pornire server
+app.listen(PORT, () => {
+  console.log(`Server pornit pe http://localhost:${PORT}`);
+});
