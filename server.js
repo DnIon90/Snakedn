@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, 'public')));
 const USERS_FILE = path.join(__dirname,'users.json');
 const SCORES_FILE = path.join(__dirname,'scores.json');
 const JWT_SECRET = process.env.JWT_SECRET || 'please_change_this_secret';
